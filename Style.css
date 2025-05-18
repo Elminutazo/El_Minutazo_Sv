@@ -530,6 +530,10 @@ footer {
         width: 100%;
     }
 
+    .home-text h1{
+        Font-size: 1.5rem;
+    }
+
    .slider-container {
     max-width: 90%; /* 🔹 Ajusta el tamaño en pantallas pequeñas */
     margin: 20px auto; /* 🔹 Añade margen para separarlo del video */
