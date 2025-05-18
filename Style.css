@@ -531,7 +531,11 @@ footer {
     }
 
     .home-text h1{
-        Font-size: 1.5rem;
+        Font-size: 2rem;
+    }
+
+    .home-text p{
+        Font-size: 1rem;
     }
 
    .slider-container {
