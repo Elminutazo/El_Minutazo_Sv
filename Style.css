@@ -531,13 +531,12 @@ footer {
     }
 
     .home-text h1{
-        Font-size: 2rem;
+        font-size: 2rem;
     }
 
     .home-text p{
-        Font-size: 1rem;
+        font-size: 1rem;
     }
-
    .slider-container {
     max-width: 90%; /* 🔹 Ajusta el tamaño en pantallas pequeñas */
     margin: 20px auto; /* 🔹 Añade margen para separarlo del video */
