@@ -575,4 +575,8 @@ footer {
     .slider-container .text-container h2{
         margin: 10px;
     }
+    
+    .home-text h1{
+        Font-size: 1.5rem;
+    }
 }
