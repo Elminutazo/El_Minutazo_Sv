@@ -132,7 +132,7 @@ nav a:hover {
     flex-direction: row; /* 🔹 Asegura que los elementos estén uno al lado del otro */
     align-items: center; /* 🔹 Centra el contenido verticalmente */
     justify-content: space-between; /* 🔹 Distribuye el texto y el slider con espacio */
-    background-image: url('img/Fondo.jpg');
+    background-image: url('Img/Fondo.jpg');
     background-size: cover;
     background-position: center;
     height: 600px;
