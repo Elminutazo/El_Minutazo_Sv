@@ -2,63 +2,63 @@ const products = [
     {
         name: "Minuta de Fresa",
         category: "minutas",
-        image: "Img/Minuta_Fresa.png",
+        image: "/Img/Minuta_Fresa.png",
         description: "Disponible en tamaño pequeño y grande.",
         price: "$ 1.50"
     },
     {
         name: "Minuta de Tamarindo",
         category: "minutas",
-        image: "Img/Minuta_Tamarindo.png",
+        image: "/Img/Minuta_Tamarindo.png",
         description: "Ideal para los amantes de lo ácido.",
         price: "$ 1.25"
     },
     {
         name: "Minuta de mango",
         category: "minutas",
-        image: "Img/Minuta_Mango.png",
+        image: "/Img/Minuta_Mango.png",
         description: "Ideal para los amantes de lo ácido/dulce.",
         price: "$ 1.25"
     },
     {
         name: "Minuta de coco",
         category: "minutas",
-        image: "Img/Minuta_Coco.png",
+        image: "/Img/Minuta_Coco.png",
         description: "Ideal para los amantes de lo fresco.",
         price: "$ 1.50"
     },
     {
         name: "Fresas con Crema",
         category: "fresas",
-        image: "Img/Fresa_Crema.png",
+        image: "/Img/Fresa_Crema.png",
         description: "Fresas frescas con crema dulce casera.",
         price: "$ 2.25"
     },
     {
         name: "Fresas con Crema y chispas",
         category: "fresas",
-        image: "Img/Fresa_Toping.png",
+        image: "/Img/Fresa_Toping.png",
         description: "Fresas frescas con chispas y toppings a tu gusto.",
         price: "$ 2.50"
     },
     {
         name: "Fresas con Crema y chocolate",
         category: "fresas",
-        image: "Img/Fresa_Chocolate.png",
+        image: "/Img/Fresa_Chocolate.png",
         description: "Fresas frescas con chispas y toppings a tu gusto.",
         price: "$ 3.00"
     },
     {
         name: "Churros preparados",
         category: "snacks",
-        image: "Img/Churros.jpeg",
+        image: "/Img/Churros.jpeg",
         description: "Ricos churros preparados a tu gusto.",
         price: "$ 0.50"
     },
     {
         name: "Charamuscas",
         category: "snacks",
-        image: "Img/Charamusca.png",
+        image: "/Img/Charamusca.png",
         description: "Te helan el paladar con sus distintos sabores frutales.",
         price: "$ 0.25"
     }
