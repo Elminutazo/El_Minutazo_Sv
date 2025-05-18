@@ -1,0 +1,574 @@
+:root {
+    --color-principal: #12a250; /* Verde principal */
+    --color-secundario: #c8278b; /* Color secundario */
+    --color-fondo: #fefefe; /* Fondo principal */
+    --color-texto: #14211c; /* Texto principal */
+    --color-titulo: #762940; /* Color de títulos */
+    --color-texto-secundario: #9c373b; /* Texto secundario */
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Outline Shadow';
+    src: url('fuente/TTMilksCasualOutline-Shadow.woff2') format('woff2'),
+        url('fuente/TTMilksCasualOutline-Shadow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* Encabezado */
+header {
+    position: fixed; /* Mantiene el header en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Fondo para que no se vea transparente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra elegante */
+    z-index: 1000; /* Se pone encima de todo */
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logo.hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+header {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+header.hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+main {
+    margin-top: 25px; /* Espacio para que no tape el header */
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Barra de navegación */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background-color 0.3s, top 0.3s;
+    z-index: 1000;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Separación entre botones */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px; /* Espacio interno del botón */
+    background-color: var(--color-texto-secundario); /* Verde bonito */
+    color: white;
+    text-decoration: none;
+    border-radius: 30px; /* Hace que parezca una elipse */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: var(--color-principal); /* Verde más oscuro al pasar mouse */
+    transform: scale(1.05); /* Efecto de agrandar ligeramente */
+}
+
+
+nav a:hover {
+    color: var(--color-texto);
+}
+
+
+/* Sección Home */
+#home {
+    display: flex; /* 🔹 Usa "flexbox" para organizar elementos en fila */
+    flex-direction: row; /* 🔹 Asegura que los elementos estén uno al lado del otro */
+    align-items: center; /* 🔹 Centra el contenido verticalmente */
+    justify-content: space-between; /* 🔹 Distribuye el texto y el slider con espacio */
+    background-image: url('img/Fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    color: white;
+    padding: 80px;
+}
+
+.home-text {
+    flex: 1; /* 🔹 El texto ocupa más espacio */
+    text-align: justify;
+    margin: 15px;
+}
+
+.home-text h1 {
+    color: var(--color-fondo); /* Color del texto */
+    font-size: 3rem;
+    font-family: 'TT Milks Casual Outline Shadow';
+    text-shadow: 12px 12px 22px rgba(255, 192, 203, 0.7); /* 🔹 Efecto de fondo en la forma del texto */
+}
+
+.home-text p{
+    font-size: 2rem;
+    color: var(--color-fondo);
+}
+
+/* Estilos del Slider */
+.slider-container {
+    flex: 1; /* 🔹 El slider ocupa el mismo espacio que el texto */
+    max-width: 400px; /* 🔹 Ajuste de tamaño */
+}
+
+/* Oculta todas las diapositivas por defecto */
+.slide {
+    display: none;
+}
+/* Imágenes más pequeñas y ajustadas */
+img {
+    width: 500px;
+    height: 210px; /* Altura reducida */
+    object-fit: cover; /* Ajustar imagen */
+}
+
+.imgs{
+    border-radius: 10px;
+    border: 2px solid var(--color-secundario);
+}
+
+/* Contenedor del texto debajo de la imagen */
+.text-container {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.1); /* Fondo sutil */
+    border-radius: 5px;
+    text-align: justify;
+    width: 500px;
+    height: 190px;
+    font-size: 1rem;
+     border: 2px solid var(--color-secundario);
+}
+
+.text-container h2{
+     font-family: 'TT Milks Casual Outline Shadow';
+     color: var(--color-texto-secundario);
+}
+
+ul {
+    list-style: none; /* Quita los puntos */
+    padding: 0; /* Elimina el espacio extra a la izquierda */
+    font-size: 1rem;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 3;
+}
+
+/* 🔹 Aseguramos que las flechas estén dentro del área del slider */
+.slider-container {
+    position: relative;
+    max-width: 400px; /* Ajuste del tamaño del slider */
+    margin-top: -1px;
+}
+
+/* 🔹 Ajustamos la ubicación de las flechas dentro del slider */
+.prev {
+    left: 5px; /* Menos separación para que no quede al extremo */
+}
+
+.next {
+    right: 5px; /* Menos separación para que no quede al extremo */
+}
+
+/* Sección About */
+#about {
+    background-color: var(--color-fondo);
+    padding: 50px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h2 {
+    color: var(--color-titulo);
+    margin-bottom: 20px;
+}
+
+.minutazo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Especialidad{
+    text-align: left;
+    font-size: 2rem;
+    margin: 20px 0;
+    color: var(--color-titulo);
+     font-family: 'TT Milks Casual Outline Shadow';
+}
+
+.texto {
+    flex: 1;
+    margin-right: 20px;
+    margin-top: 30px;
+    font-size: 25px;
+    color: var(--color-texto);
+    text-align: justify;
+}
+
+.video {
+    flex: 0 0 auto;
+    width: 50%;
+    height: 70%;
+    border: 2px solid var(--color-secundario);
+    border-radius: 10px;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Catálogo */
+.catalogo {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 5px;
+}
+
+.nuestros-productos {
+    text-align: left;
+    font-size: 2rem;
+    margin: 20px 0;
+    color: var(--color-titulo);
+     font-family: 'TT Milks Casual Outline Shadow';
+}
+
+/* Estilo para el titulo de cada categoria - sección */
+.titulo-categoria {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--color-titulo);
+    margin: 0 0 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--color-secundario);
+    padding-bottom: 8px;
+    width: 100%;
+     font-family: 'TT Milks Casual Outline Shadow';
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Tarjetas de productos */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(152, 151, 151, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 2px solid var(--color-secundario);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+    color: var(--color-titulo);
+     font-family: 'TT Milks Casual Outline Shadow';
+}
+
+/* Descripciones */
+.card p {
+    margin: 10px 15px 15px;
+    font-size: 0.9rem;
+    color: var(--color-texto-secundario);
+    flex-grow: 1;
+}
+
+/* Precio */
+.card h2 {
+    margin: 0 auto 10px;
+    color: var(--color-fondo);
+    font-size: 1rem;
+    background-color: var(--color-texto);
+    border-radius: 15px;
+    height: 25px;
+    width: 80px;
+    text-align: center;
+    align-self: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: var(--color-texto);
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.footer-socials-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-socials {
+    margin-top: 10px;
+}
+
+.footer-socials a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 40px;
+    transition: color 0.3s, transform 0.5s;
+}
+
+.footer-socials a:hover {
+    color: var(--color-secundario);
+    transform: translateY(-8px) rotate(-10deg);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .card img {
+        height: 160px;
+    }
+
+    .minutazo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #home, #about {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+        color: var(--color-principal);
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+/* Botón hamburguesa - color negro y hover */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #000; /* Color negro */
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 2001;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: var(--color-secundario); /* Color al hacer hover */
+}
+
+/* Estilo responsive para móviles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    nav ul {
+        max-height: 100vh; /* 🔹 Ajusta la altura máxima del menú */
+        overflow-y: auto; /* 🔹 Permite desplazamiento si es necesario */
+    }
+
+    nav ul.show {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        z-index: 2000;
+    }
+
+    nav ul li {
+        text-align: center;
+        width: 100%;
+        padding: 15px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    nav ul li a {
+        color: var(--color-texto);
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        width: 100%;
+    }
+
+    nav ul li a:hover {
+        background-color: var(--color-principal);
+        color: white;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #home {
+        flex-direction: column; /* 🔹 Cambia a una columna para mejor distribución */
+        height: auto; /* 🔹 Ajusta la altura automáticamente */
+        padding: 40px; /* 🔹 Reduce el espacio interno */
+    }
+
+    .home-text {
+        text-align: center; /* 🔹 Centra el texto */
+        width: 100%;
+    }
+
+   .slider-container {
+    max-width: 90%; /* 🔹 Ajusta el tamaño en pantallas pequeñas */
+    margin: 20px auto; /* 🔹 Añade margen para separarlo del video */
+    display: block;
+}
+
+.slide img {
+    width: 100%; /* 🔹 Asegura que las imágenes del slider no excedan el contenedor */
+    height: auto;
+}
+
+.slider-container .text-container {
+    max-width: 100%; /* 🔹 Ajusta el ancho para evitar desbordamiento */
+    max-height: 180px; /* 🔹 Controla la altura */
+    overflow: hidden; /* 🔹 Evita desbordamientos */
+    text-overflow: ellipsis; /* 🔹 Si el texto es largo, agrega "..." */
+    word-wrap: break-word;
+    font-size: 14px; /* 🔹 Reduce el tamaño del texto */
+    line-height: 1.4; /* 🔹 Mejora la legibilidad */
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* 🔹 Centra el texto */
+}
+
+}
+
+/* 🔹 Ajuste adicional para dispositivos pequeños */
+@media screen and (max-width: 600px) {
+    .slider-container .text-container {
+        max-width: 100%; /* 🔹 Reduce aún más el ancho en móviles */
+        font-size: 12px; /* 🔹 Ajusta tamaño de fuente */
+        max-height: 160px; /* 🔹 Controla mejor el espacio */
+        padding: 10px;
+        text-align: justify;
+    }
+
+    .slider-container .text-container h2{
+        margin: 10px;
+    }
+}

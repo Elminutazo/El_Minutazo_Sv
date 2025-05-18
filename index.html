@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Minutazo</title>
+    <link rel="icon" type="Img/Icono.png" href="Img/IconoMinuta.png">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="Style.css">
+
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="Img/Logo.jpg" alt="Logo de El Minutazo" class="logo">
+       <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#" onclick="filterProducts('inicio')">Inicio</a></li>
+                <li><a href="#" onclick="filterProducts('about')">Somos</a></li>
+                <li><a href="#" onclick="filterProducts('todos')">Todos</a></li>
+                <li><a href="#" onclick="filterProducts('minutas')">Minutas</a></li>
+                <li><a href="#" onclick="filterProducts('fresas')">Fresas</a></li>
+                <li><a href="#" onclick="filterProducts('snacks')">Snacks</a></li>
+                <li><a href="#footer-socials">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main class="main-content">
+        <section id="home">
+            <div class="home-text">
+            <h1>BIENVENIDOS A EL MINUTAZO</h1>
+            <p>Bienvenidos a El Minutazo, donde encontrarás los mejores productos
+                refrescantes para disfrutar en cualquier momento del día. Nos especializamos en 
+                ofrecerte minutas, raspados y fresas con crema elaborados con ingredientes frescos
+                y naturales, pensados para que cada bocado sea una experiencia única.</p>
+            </div>
+        </section>
+
+<section id="about" class="about">
+    <div class="about-content">
+        <h2 class="Especialidad">¿Quienes Somos?</h2>
+        <div class="minutazo">
+            <!-- 🔹 Slider reemplazando el texto -->
+            <div class="slider-container">
+                <div class="slide fade">
+                    <img src="img/Slader1.jpg" alt="Imagen 1" class="imgs">
+                    <div class="text-container">
+                        <h2>MISION</h2>
+                        <p>Somos la mejor opción en Sonsonate para disfrutar raspados y minutas únicas, refrescantes y llenas de sabor, creando momentos de alegría con atención de calidad e ingredientes top.</p>
+                    </div>
+                </div>
+
+                <div class="slide fade">
+                    <img src="img/Slader2.jpg" alt="Imagen 2" class="imgs">
+                    <div class="text-container">
+                        <h2>VISION</h2>
+                        <p>Ser el lugar favorito de todos en Sonsonate cuando se trata de minutas y raspados, destacando por nuestros sabores únicos, calidad en cada producto y un servicio que siempre deja buenas vibras. Queremos marcar la diferencia y refrescar cada momento con estilo.</p>
+                    </div>
+                </div>
+
+                <div class="slide fade">
+                    <img src="img/Slader3.jpg" alt="Imagen 3" class="imgs">
+                    <div class="text-container">
+                        <h2>VALORES</h2>
+                        <ul>
+                            <li>Honestidad</li>
+                            <li>Competitividad</li>
+                            <li>Innovación</li>
+                            <li>Responsabilidad</li>
+                            <li>Transparencia</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 🔹 Conservamos el video -->
+            <div class="video">
+                <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe" 
+                    src="https://heyzine.com/flip-book/357abd93ad.html" 
+                    style="border: 1px solid lightgray; width: 100%; height: 400px;">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <h2 class="nuestros-productos">Nuestros Productos</h2>
+
+        <section id="catalogo" class="catalogo">
+            <!-- Aquí se cargarán los productos dinámicamente -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-socials" id="footer-socials">
+            <p class="footer-socials-title">Contactanos y Siguenos en nuestras redes sociales</p>
+            <a href="https://www.facebook.com/el.minutazo.sv?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/el_minutazo_sv?igsh=Nnk0MW14MndveXl5" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@el_minutazo_sv?_t=ZM-8wPHdtYL0HG&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/50373906007" target="_blank"><i class="fab fa-whatsapp"></i></a>    
+        </div>
+        <p>&copy; 2025 El Minutazo. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script principal -->
+    <script src="Script.js"></script>
+</body>
+</html>
