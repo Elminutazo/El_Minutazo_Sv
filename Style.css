@@ -569,6 +569,11 @@ footer {
     align-items: center;
     text-align: center; /* 🔹 Centra el texto */
 }
+    .video{
+        width: 380px;
+        max-height: 100%;
+        padding: 5px;
+    }
 
 }
 
