@@ -150,12 +150,19 @@ nav a:hover {
     color: var(--color-fondo); /* Color del texto */
     font-size: 3rem;
     font-family: 'TT Milks Casual Outline Shadow';
-    text-shadow: 12px 12px 22px rgba(255, 192, 203, 0.7); /* 🔹 Efecto de fondo en la forma del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .home-text p{
     font-size: 2rem;
     color: var(--color-fondo);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: justify;
+    hyphens: auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Estilos del Slider */
