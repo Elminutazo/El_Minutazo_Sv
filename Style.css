@@ -570,7 +570,7 @@ footer {
     text-align: center; /* 🔹 Centra el texto */
 }
     .video{
-        width: 380px;
+        min-width: 90%;
         max-height: 100%;
         padding: 5px;
     }
@@ -599,7 +599,7 @@ footer {
         Font-size: 1rem;
     }
     .video{
-        width: 380px;
+        min-width: 90%;
         max-height: 100%;
         padding: 5px;
     }
